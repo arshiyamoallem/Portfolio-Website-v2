@@ -50,8 +50,8 @@ section {
 }
 
 .logo-img {
-  width: 280px;
-  height: 280px;
+  width: 100%;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--primary);
@@ -81,9 +81,14 @@ h2, p {
 }
 
 p {
-    max-width: 20.5cm;
-    line-height: 1.5cm;
-    font-size: 1.75em;
+  font-size: 1rem; /* Base size for mobile */
+  line-height: 1.5; /* Relative for better scaling */
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 1.25rem; /* Slightly bigger on tablets/desktops */
+  }
 }
 
 .home {
@@ -185,8 +190,9 @@ p {
   padding: 22px;
 
   /* Static size with room for content */
-  width: 280px;
-  height: 280px;
+  width: 100%;
+  max-width: 280px; /* Keeps it from stretching too much */
+  height: auto;
 
   display: flex;
   flex-direction: column;
@@ -414,8 +420,8 @@ p {
   border-radius: 16px;
   padding: 50px 28px 28px;
   box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
-  max-width: 400px;
-  width: 90vw;
+  max-width: 90%;
+  width: 500px;
   text-align: center;
   position: relative;
   transform: translateY(0);
@@ -588,178 +594,50 @@ p {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* TABLET STYLES */
-        @media screen and (max-width: 1024px) {
-            .topnav {
-                padding: 0 10px;
-            }
-            
-            .topnav a {
-                padding: 14px 8px;
-                font-size: 0.9rem;
-            }
-            
-            .logo-img {
-                width: 220px;
-                height: 220px;
-            }
-            
-            .timeline-container {
-                width: 45%;
-                padding: 10px 20px;
-            }
-            
-            .hex-border {
-                width: 80px;
-                height: 95px;
-            }
-            
-            .bg-image {
-                width: 65px;
-                height: 80px;
-            }
-        }
+@media (max-width: 768px) {
+  .topnav {
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+  }
 
-/* MOBILE STYLES */
-@media screen and (max-width: 768px) {
-    html {
-        scroll-padding-top: 70px;
-    }
-    .topnav {
-        height: auto;
-        min-height: 60px;
-        padding: 0;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .hamburger {
-        display: block;
-        padding: 15px;
-    }
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: black;
-        flex-direction: column;
-        width: 100%;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .nav-links a {
-        padding: 15px 20px;
-        border-top: 1px solid #333;
-        width: 100%;
-        text-align: left;
-    }
-    section {
-        padding: 30px 15px;
-        min-height: auto;
-    }
-    #home {
-        min-height: 100vh;
-        padding-top: 100px;
-    }
-    .logo-img {
-        width: 180px;
-        height: 180px;
-        margin-top: 20px;
-    }
-    .project-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 10px;
-    }
-    .project-item {
-        min-height: 200px;
-        padding: 20px;
-    }
-    /* Mobile Timeline */
-    .timeline::after {
-        left: 31px;
-    }
-    .timeline-container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-    .timeline-container::after {
-        left: 21px;
-    }
-    .right {
-        left: 0%;
-    }
-    .left::after, 
-    .right::after {
-        left: 21px;
-    }
-    .content {
-        padding: 15px;
-    }
-    .image-gallery-container ul {
-        gap: 10px;
-    }
-    .hex-border {
-        width: 70px;
-        height: 80px;
-    }
-    .bg-image {
-        width: 55px;
-        height: 65px;
-    }
-    #theme-switch {
-        top: 15px;
-        right: 15px;
-        width: 35px;
-        height: 35px;
-    }
-    .modal-content {
-        margin: 0 10px;
-        padding: 25px 15px;
-    }
+  .topnav a {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  #theme-switch {
+    position: static;
+    margin: 10px auto;
+  }
 }
-/* SMALL MOBILE STYLES */
-@media screen and (max-width: 480px) {
-    .topnav a span {
-        display: none;
-    }
-    .topnav a {
-        padding: 12px 8px;
-    }
-    .logo-img {
-        width: 150px;
-        height: 150px;
-    }
-    .project-grid {
-        padding: 0 5px;
-    }
-    .hex-border {
-        width: 60px;
-        height: 70px;
-    }
-    .bg-image {
-        width: 45px;
-        height: 55px;
-    }
-    .image-gallery-container ul li {
-        margin: 5px;
-    }
+
+/* Phones */
+@media (max-width: 600px) { 
+  /* Resize hexagons */
+  .hex-border {
+    width: 80px;
+    height: 95px;
+  }
+
+  .bg-image {
+    width: 70px;
+    height: 85px;
+  }
+
+  /* Adjust text for small screens */
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; height: auto; }
+  p { font-size: 1rem; }
 }
-/* LANDSCAPE MOBILE */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-    section {
-        min-height: auto;
-        padding: 40px 20px;
-    }
-    #home {
-        min-height: 100vh;
-    }
-    .logo-img {
-        width: 120px;
-        height: 120px;
-    }
+
+/* Tablets */
+@media (max-width: 900px) {
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
+

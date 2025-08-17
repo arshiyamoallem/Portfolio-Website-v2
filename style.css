@@ -589,3 +589,25 @@ p {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .timeline-container {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .timeline::after {
+    left: 31.5%;
+  }
+  
+  .left, .right {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .left::after, .right::after {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}

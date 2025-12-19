@@ -1,5 +1,5 @@
 # Portfolio-Web
-Website with link: https://arshiyamoallem.github.io/Portfolio-Website-v2/
+Website with link: 
 
 Design is only offered to computers/laptops and not other devices.
 

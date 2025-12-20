@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshiya Moallem - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./img/AMIcon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <div class = "topnav">
+        <button id="theme-switch" aria-label="Toggle dark mode">
+
+            <!-- LIGHT MODE -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                <path d="M504-425Zm20 385H420l20-12.5q20-12.5 43.5-28t43.5-28l20-12.5q81-6 149.5-49T805-285q-86-8-163-43.5T504-425q-61-61-97-138t-43-163q-77 43-120.5 118.5T200-444v12l-12 5.5q-12 5.5-26.5 11.5T135-403.5l-12 5.5q-2-11-2.5-23t-.5-23q0-146 93-257.5T450-840q-18 99 11 193.5T561-481q71 71 165.5 100T920-370q-26 144-138 237T524-40Zm-284-80h180q25 0 42.5-17.5T480-180q0-25-17-42.5T422-240h-52l-20-48q-14-33-44-52.5T240-360q-50 0-85 34.5T120-240q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T40-240q0-83 58.5-141.5T240-440q60 0 109.5 32.5T423-320q57 2 97 42.5t40 97.5q0 58-41 99t-99 41H240Z"/>
+            </svg>
+
+            <!-- DARK MODE -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                <path d="M440-760v-160h80v160h-80Zm266 110-56-56 113-114 56 57-113 113Zm54 210v-80h160v80H760Zm3 299L650-254l56-56 114 112-57 57ZM254-650 141-763l57-57 112 114-56 56Zm-14 450h180q25 0 42.5-17.5T480-260q0-25-17-42.5T421-320h-51l-20-48q-14-33-44-52.5T240-440q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T40-320q0-83 58.5-141.5T240-520q60 0 109.5 32.5T423-400q58 0 97.5 43T560-254q-2 57-42.5 95.5T420-120H240Zm320-134q-5-20-10-39t-10-39q45-19 72.5-59t27.5-89q0-66-47-113t-113-47q-60 0-105 39t-53 99q-20-5-41-9t-41-9q14-88 82.5-144T480-720q100 0 170 70t70 170q0 77-44 138.5T560-254Zm-79-226Z"/>
+            </svg>
+
+        </button>
+        <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+        <a href="#projects"><i class="fas fa-code"></i> Projects</a>
+        <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+        <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+        <a href="#skills"><i class="fas fa-lightbulb"></i> Skills</a>
+        <!-- <a href="#extra"><i class="fas fa-person"></i> Extra</a> -->
+        <a href="#" id="contactBtn" class="nav-item">
+          <i class="fas fa-envelope"></i>
+          <span>Contact Me</span>
+        </a>
+        <a href="./docs/Arshiya Moallem Resume.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
+        <a href="https://linkedin.com/in/arshiyamoallem" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/arshiyamoallem" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+
+    <main class="main-content">
+        <section id="home" class="card glass-card">
+          <div class="card-header">
+            <img src="./img/arshiyamoallem_profile.PNG" alt="Arshiya Moallem" class="logo-img" style = "margin-top: 80px;">
+            <div class="logo-text">
+                <h1>Arshiya Moallem</h1>
+          <p class="intro-text">
+            Hi, I'm Arshiya Moallem and I'm a Software Engineering student at Carleton University. I enjoy building things, solving problems, and constantly learning new skills along the way. I'm passionate about creating projects that are both useful and enjoyable to use.
+          </p>
+        </section>
+
+        <section id="projects" class="card glass-card">
+            <h2><span class="text-gradient">Projects</span></h2>
+            <div class="project-grid">
+            <div class="project-item">
+                <div class="project-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                    <h3>Social Media App</h3>
+                    <p class="project-description">Console-based social media app</p>
+                    <a href="https://github.com/arshiyamoallem/social-media-app" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>Video Game Hub</h3>
+                <p class="project-description">Console-based game launcher</p>
+                <a href="https://github.com/arshiyamoallem/video-game-hub" target="_blank" class="project-link">
+                    View Project <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>   
+
+                        <div class="project-item">
+                <div class="project-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3>Portfolio Website-v1</h3>
+                <p class="project-description">Basic portfolio website</p>
+                <a href="https://arshiyamoallem.github.io/Portfolio-Website-v1/" target="_blank" class="project-link" id="basic-portfolio-link"> Visit Website <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/arshiyamoallem/Portfolio-Website-v1" target="_blank" class="project-link">
+                    View Project <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>   
+
+        </section>
+
+        <section id="education" class="card glass-card">
+            <h2><span class="text-gradient">Education</span></h2>
+            <div class="timeline">
+                
+                <div class="timeline-container left">
+                    <div class="content">
+                        <h3>Carleton University</h3>
+                        <p><i>Sept 2023 - Present</i><br>Third-Year Standing<br>Bachelor of Engineering Software Engineering</p>
+                    </div>
+                </div>
+
+                <div class="timeline-container right">
+                    <div class="content">
+                        <h3>École secondaire publique Louis-Riel</h3>
+                        <p><i>Aug 2019 - June 2023</i><br>Graduated with Honours</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="experience" class="card glass-card">
+        <h2><span class="text-gradient">Experience</span></h2>
+        <div class="timeline">
+            <div class="timeline-container right">
+                <div class="content">
+                    <h3>Student Co Op Position,<br>Shared Services Canada (SSC)</h3>
+                    <p><i>May 2025 - Dec 2025</i><br>Working on Cloud development and IaC.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="skills" class="card glass-card">
+            <h2><span class="text-gradient">Skills</span></h2>
+            <div class="skills-grid">
+            <div class="skills-item">
+            <div class="container">
+                <h3 id="skills-prog-names">Back-End Programming Languages</h3>
+                    <div class="container">
+                        <div class="image-gallery-container">
+                        <ul>
+                            <li>
+
+                                <div class="hex-border">
+                                    <div class="bg-image" style="background-image: url('https://static.vecteezy.com/system/resources/previews/048/332/144/non_2x/python-icon-transparent-background-free-png.png');"></div>
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <div class="hex-border">
+                                    <div class="bg-image" style="background-image: url('https://cdn.freebiesupply.com/logos/thumbs/2x/java-4-logo.png');"></div>
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <div class="hex-border">
+                                    <div class="bg-image" style="background-image: url('https://img.icons8.com/?size=512&id=40670&format=png');"></div> 
+                                </div>
+                                
+                            </li>
+
+                            <li>
+
+                                <div class="hex-border">
+                                    <div class="bg-image" style="background-image: url('https://images.icon-icons.com/2699/PNG/512/golang_logo_icon_171073.png');"></div>
+                                </div>
+
+                            </li>
+                        </ul>
+
+                <h3 id="skills-prog-names">Front-End Programming Languages</h3>
+                    <div class="container">
+                        <div class="image-gallery-container">
+                        <ul>
+                            <li>
+
+                                <div class="hex-border">
+                                    <div class="bg-image" style="background-image: url('./img/HTML_logo_transparant.png');"></div>
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <div class="hex-border">
+                                    <div class="bg-image" style="background-image: url('./img/css_logo_transparant.png');"></div>
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <div class="hex-border">
+                                    <div class="bg-image" style="background-image: url('./img/javascript-logo-javascript-icon-transparent-free-png.webp');"></div>
+                                </div>
+                                
+                            </li>
+                        </ul>
+
+                <h3 id="skills-prog-names">IaC Programming Languages</h3>
+                        <div class="container">
+                            <div class="image-gallery-container">
+                            <ul>
+                                <li>
+
+                                    <div class="hex-border">
+                                        <div class="bg-image" style="background-image: url('./img/Terraform_logo_transparant.png');"></div>
+                                    </div>
+
+                                </li>
+
+                                <li>
+
+                                    <div class="hex-border">
+                                        <div class="bg-image" style="background-image: url('./img/Ansible_Logo.png');"></div>
+                                    </div>
+
+                                </li>
+
+                                <li>
+
+                                    <div class="hex-border">
+                                        <div class="bg-image" style="background-image: url('./img/openstack-logo-svg-vector.svg');"></div>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+
+                <h3 id="skills-prog-names">Operating Systems</h3>
+                    <div class="container">
+                        <div class="image-gallery-container">
+                            <ul>
+                                <li>
+                                    <div class="hex-border">
+                                        <div class="bg-image" style="background-image: url('./img/linux_logo_transparant.png');"></div>
+                                    </div>
+                                </li>
+                            </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content glass-card" style="position: absolute;">
+        <span class="close-btn">&times;</span>
+        <h3><span class="text-gradient" style="color: #2d2d2d;">Contact Me</span></h3>
+        <form action="https://formspree.io/f/myzjdzoy" method="POST">
+            <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <i class="fas fa-user"></i>
+            </div>
+            <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required />
+            <i class="fas fa-envelope"></i>
+            </div>
+            <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <i class="fas fa-comment"></i>
+            </div>
+            <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+          &copy; 2025 Arshiya Moallem. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

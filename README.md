@@ -1,4 +1,4 @@
-# Arshiya Moallem - Portfolio Website v2
+# Arshiya Moallem - Portfolio Website
 
 A fully responsive personal portfolio website showcasing my projects, education, experience, and technical skills.
 

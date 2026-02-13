@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arshiya Moallem - Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="./img/AMIcon.png">
+    <link rel="icon" type="image/x-icon" href="AMIcon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="script.js"></script>
 </head>
 <body>
-    <!-- Top Navigation Bar -->
-    <div class = "topnav">
-        <button id="theme-switch" aria-label="Toggle dark mode">
 
+    <!-- Top Navigation Bar with Mobile Menu -->
+    <div class="topnav">
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <button id="theme-switch" aria-label="Toggle dark mode">
             <!-- LIGHT MODE -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
                 <path d="M504-425Zm20 385H420l20-12.5q20-12.5 43.5-28t43.5-28l20-12.5q81-6 149.5-49T805-285q-86-8-163-43.5T504-425q-61-61-97-138t-43-163q-77 43-120.5 118.5T200-444v12l-12 5.5q-12 5.5-26.5 11.5T135-403.5l-12 5.5q-2-11-2.5-23t-.5-23q0-146 93-257.5T450-840q-18 99 11 193.5T561-481q71 71 165.5 100T920-370q-26 144-138 237T524-40Zm-284-80h180q25 0 42.5-17.5T480-180q0-25-17-42.5T422-240h-52l-20-48q-14-33-44-52.5T240-360q-50 0-85 34.5T120-240q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T40-240q0-83 58.5-141.5T240-440q60 0 109.5 32.5T423-320q57 2 97 42.5t40 97.5q0 58-41 99t-99 41H240Z"/>
@@ -23,6 +27,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
                 <path d="M440-760v-160h80v160h-80Zm266 110-56-56 113-114 56 57-113 113Zm54 210v-80h160v80H760Zm3 299L650-254l56-56 114 112-57 57ZM254-650 141-763l57-57 112 114-56 56Zm-14 450h180q25 0 42.5-17.5T480-260q0-25-17-42.5T421-320h-51l-20-48q-14-33-44-52.5T240-440q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T40-320q0-83 58.5-141.5T240-520q60 0 109.5 32.5T423-400q58 0 97.5 43T560-254q-2 57-42.5 95.5T420-120H240Zm320-134q-5-20-10-39t-10-39q45-19 72.5-59t27.5-89q0-66-47-113t-113-47q-60 0-105 39t-53 99q-20-5-41-9t-41-9q14-88 82.5-144T480-720q100 0 170 70t70 170q0 77-44 138.5T560-254Zm-79-226Z"/>
             </svg>
+        </button>
 
         </button>
         <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
@@ -35,15 +40,15 @@
           <i class="fas fa-envelope"></i>
           <span>Contact Me</span>
         </a>
-        <a href="./docs/Arshiya Moallem Resume.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
-        <a href="https://linkedin.com/in/arshiyamoallem" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/arshiyamoallem" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="Arshiya Moallem Resume.pdf" target="_blank" title="Download Resume"><i class="fas fa-file-pdf"></i> <span>Resume</span></a>
+        <a href="https://linkedin.com/in/arshiyamoallem" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a>
+        <a href="https://github.com/arshiyamoallem" target="_blank" title="GitHub"><i class="fab fa-github"></i> <span>GitHub</span></a>
     </div>
 
     <main class="main-content">
         <section id="home" class="card glass-card">
           <div class="card-header">
-            <img src="./img/arshiyamoallem_profile.PNG" alt="Arshiya Moallem" class="logo-img" style = "margin-top: 80px;">
+            <img src="arshiyamoallem_profile.PNG" alt="Arshiya Moallem" class="logo-img" style = "margin-top: 80px;">
             <div class="logo-text">
                 <h1>Arshiya Moallem</h1>
           <p class="intro-text">
@@ -88,6 +93,7 @@
                 </a>
             </div>   
 
+            
         </section>
 
         <section id="education" class="card glass-card">
@@ -117,11 +123,12 @@
             <div class="timeline-container right">
                 <div class="content">
                     <h3>Student Co Op Position,<br>Shared Services Canada (SSC)</h3>
-                    <p><i>May 2025 - Dec 2025</i><br>Working on Cloud development and IaC.</p>
+                    <p><i>May 2024 - Present</i><br>Working on Cloud development and IaC.</p>
                 </div>
             </div>
         </div>
         </section>
+
 
         <section id="skills" class="card glass-card">
             <h2><span class="text-gradient">Skills</span></h2>
@@ -162,7 +169,7 @@
                                     <div class="bg-image" style="background-image: url('https://images.icon-icons.com/2699/PNG/512/golang_logo_icon_171073.png');"></div>
                                 </div>
 
-                            </li>
+                        </li>
                         </ul>
 
                 <h3 id="skills-prog-names">Front-End Programming Languages</h3>
@@ -172,7 +179,7 @@
                             <li>
 
                                 <div class="hex-border">
-                                    <div class="bg-image" style="background-image: url('./img/HTML_logo_transparant.png');"></div>
+                                    <div class="bg-image" style="background-image: url('https://img.icons8.com/fluent/512/html-5.png');"></div>
                                 </div>
 
                             </li>
@@ -180,7 +187,7 @@
                             <li>
 
                                 <div class="hex-border">
-                                    <div class="bg-image" style="background-image: url('./img/css_logo_transparant.png');"></div>
+                                    <div class="bg-image" style="background-image: url('https://img.icons8.com/fluent/512/css3.png');"></div>
                                 </div>
 
                             </li>
@@ -188,7 +195,7 @@
                             <li>
 
                                 <div class="hex-border">
-                                    <div class="bg-image" style="background-image: url('./img/javascript-logo-javascript-icon-transparent-free-png.webp');"></div>
+                                    <div class="bg-image" style="background-image: url('https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png');"></div>
                                 </div>
                                 
                             </li>
@@ -201,7 +208,7 @@
                                 <li>
 
                                     <div class="hex-border">
-                                        <div class="bg-image" style="background-image: url('./img/Terraform_logo_transparant.png');"></div>
+                                        <div class="bg-image" style="background-image: url('https://img.icons8.com/fluent/512/terraform.png');"></div>
                                     </div>
 
                                 </li>
@@ -209,7 +216,7 @@
                                 <li>
 
                                     <div class="hex-border">
-                                        <div class="bg-image" style="background-image: url('./img/Ansible_Logo.png');"></div>
+                                        <div class="bg-image" style="background-image: url('https://img.icons8.com/?size=512&id=iGCCE2iEmh2u&format=png');"></div>
                                     </div>
 
                                 </li>
@@ -217,43 +224,50 @@
                                 <li>
 
                                     <div class="hex-border">
-                                        <div class="bg-image" style="background-image: url('./img/openstack-logo-svg-vector.svg');"></div>
+                                        <div class="bg-image" style="background-image: url('https://cdn.freebiesupply.com/logos/large/2x/openstack-logo-svg-vector.svg');"></div>
                                     </div>
                                     
                                 </li>
                             </ul>
 
                 <h3 id="skills-prog-names">Operating Systems</h3>
-                    <div class="container">
-                        <div class="image-gallery-container">
+                        <div class="container">
+                            <div class="image-gallery-container">
                             <ul>
                                 <li>
+
                                     <div class="hex-border">
-                                        <div class="bg-image" style="background-image: url('./img/linux_logo_transparant.png');"></div>
+                                        <div class="bg-image" style="background-image: url('https://images.vexels.com/content/140692/preview/linux-logo-72ceef.png');"></div> <!-- https://images.vexels.com/content/140692/preview/linux-logo-72ceef.png -->
                                     </div>
                                 </li>
                             </ul>
-            </div>
+                </div>
         </section>
+
+        <!-- <section id="extra" class="card glass-card">
+            <h2><span class="text-gradient">extra</span></h2>
+            <div class="extra-grid">
+            <div class="extra-item">
+        </section> -->
 
     </main>
 
     <div id="contactModal" class="modal">
         <div class="modal-content glass-card" style="position: absolute;">
         <span class="close-btn">&times;</span>
-        <h3><span class="text-gradient" style="color: #2d2d2d;">Contact Me</span></h3>
+        <h3><span class="text-gradient">Contact Me</span></h3>
         <form action="https://formspree.io/f/myzjdzoy" method="POST">
             <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <i class="fas fa-user"></i>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <i class="fas fa-user"></i>
             </div>
             <div class="form-group">
-            <input type="email" name="email" placeholder="Your Email" required />
-            <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Your Email" required />
+                <i class="fas fa-envelope"></i>
             </div>
             <div class="form-group">
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <i class="fas fa-comment"></i>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <i class="fas fa-comment"></i>
             </div>
             <button type="submit" class="submit-btn">
             <span>Send Message</span>

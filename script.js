@@ -18,13 +18,41 @@ function setupDarkModeToggle() {
     });
   
     if (darkmode === "active") enableDarkmode();
-  }
-  
-  // ✅ Call it immediately (or later if you want to wait for the DOM)
-  document.addEventListener('DOMContentLoaded', setupDarkModeToggle);
-  
+}
+
+document.addEventListener('DOMContentLoaded', setupDarkModeToggle);
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile menu toggle
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const topnav = document.querySelector('.topnav');
+  
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+      topnav.classList.toggle('mobile-open');
+      const icon = mobileMenuToggle.querySelector('i');
+      if (topnav.classList.contains('mobile-open')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+    
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.topnav a:not(#theme-switch):not(#mobile-menu-toggle)').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          topnav.classList.remove('mobile-open');
+          const icon = mobileMenuToggle.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+    });
+  }
+  
   // Smooth scroll for nav links with hash
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
@@ -45,70 +73,36 @@ document.addEventListener('DOMContentLoaded', () => {
   contactBtn.addEventListener('click', e => {
     e.preventDefault();
     modal.classList.add('show');
-
-    // Center modal content
-    modalContent.style.top = '50%';
-    modalContent.style.left = '50%';
-    modalContent.style.transform = 'translate(-50%, -50%)';
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
   });
 
   // Close modal on X button click
   closeBtn.addEventListener('click', () => {
     modal.classList.remove('show');
+    document.body.style.overflow = ''; // Restore scrolling
   });
 
-  // Close modal when clicking outside modal content (modal background)
+  // Close modal when clicking outside modal content
   modal.addEventListener('click', e => {
     if (e.target === modal) {
       modal.classList.remove('show');
+      document.body.style.overflow = '';
     }
   });
-
-  // --- Draggable textarea container inside modal ---
-  const draggableContainer = modalContent.querySelector('.draggable-textarea-container');
-
-  let isDragging = false;
-  let dragOffsetX = 0;
-  let dragOffsetY = 0;
-
-  draggableContainer.style.top = '100px';
-  draggableContainer.style.left = '20px';
-  draggableContainer.style.cursor = 'grab';
-
-  draggableContainer.addEventListener('mousedown', e => {
-    e.preventDefault(); // prevent text selection
-    isDragging = true;
-    const rect = draggableContainer.getBoundingClientRect();
-    dragOffsetX = e.clientX - rect.left;
-    dragOffsetY = e.clientY - rect.top;
-    draggableContainer.style.cursor = 'grabbing';
-  });
-
-  window.addEventListener('mousemove', e => {
-    if (!isDragging) return;
-
-    let newLeft = e.clientX - dragOffsetX;
-    let newTop = e.clientY - dragOffsetY;
-
-    const modalRect = modalContent.getBoundingClientRect();
-    const boxRect = draggableContainer.getBoundingClientRect();
-
-    // Clamp movement inside modal content boundaries
-    newLeft = Math.min(Math.max(newLeft, modalRect.left), modalRect.right - boxRect.width);
-    newTop = Math.min(Math.max(newTop, modalRect.top), modalRect.bottom - boxRect.height);
-
-    // Convert to modalContent relative coords
-    const relativeLeft = newLeft - modalRect.left;
-    const relativeTop = newTop - modalRect.top;
-
-    draggableContainer.style.left = `${relativeLeft}px`;
-    draggableContainer.style.top = `${relativeTop}px`;
-  });
-
-  window.addEventListener('mouseup', () => {
-    if (isDragging) {
-      isDragging = false;
-      draggableContainer.style.cursor = 'grab';
-    }
+  
+  // Handle window resize - close mobile menu if resized above mobile breakpoint
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (window.innerWidth > 768 && topnav.classList.contains('mobile-open')) {
+        topnav.classList.remove('mobile-open');
+        const icon = mobileMenuToggle?.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      }
+    }, 250);
   });
 });

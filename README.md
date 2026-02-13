@@ -8,7 +8,7 @@ A fully responsive personal portfolio website showcasing my projects, education,
 
 ## 🌐 Live Demo
 
-[View Live Site](https://arshiyamoallem.github.io/Portfolio-Website-v2/) *(Update with your actual URL)*
+[View Live Site](https://arshiyamoallem.github.io/Portfolio-Website-v2/) 
 
 ## ✨ Features
 

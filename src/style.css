@@ -432,6 +432,10 @@ p {
     position: relative;
 }
 
+.modal-content h3 {
+    color: #2d2d2d !important;
+}
+
 .close-btn {
     color: #aaa;
     position: absolute;
@@ -455,6 +459,7 @@ p {
     border: 1px solid #e3eafc;
     border-radius: 8px;
     font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif; 
     background: #f7f8fa;
     color: #2d2d2d;
     outline: none;

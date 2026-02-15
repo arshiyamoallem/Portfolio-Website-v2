@@ -62,11 +62,6 @@ section {
     margin-bottom: 2rem;
 }
 
-img {
-  pointer-events: none;
-  user-select: none;
-}
-
 /* Responsive typography */
 h1 {
     margin-bottom: 1.5rem;
@@ -774,4 +769,5 @@ p {
         display: none;
     }
 }
+
 

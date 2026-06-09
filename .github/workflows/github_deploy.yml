@@ -13,11 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Copy src to root
-        run: |
-          cp src/index.html index.html
-
       - name: Deploy to Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

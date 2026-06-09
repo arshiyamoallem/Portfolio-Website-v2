@@ -149,4 +149,4 @@ If you have any questions or need help with the website:
 
 ⭐ **Star this repo if you find it helpful!**
 
-Last Updated: February 2026
+Last Updated: February 2025

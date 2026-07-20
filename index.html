@@ -15,12 +15,13 @@
     <script src="script.js"></script>
 </head>
 <body>
+
     <!-- Top Navigation Bar with Mobile Menu -->
     <div class="topnav">
         <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
             <i class="fas fa-bars"></i>
         </button>
-        
+
         <button id="theme-switch" aria-label="Toggle dark mode">
             <!-- LIGHT MODE -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
@@ -32,7 +33,7 @@
                 <path d="M440-760v-160h80v160h-80Zm266 110-56-56 113-114 56 57-113 113Zm54 210v-80h160v80H760Zm3 299L650-254l56-56 114 112-57 57ZM254-650 141-763l57-57 112 114-56 56Zm-14 450h180q25 0 42.5-17.5T480-260q0-25-17-42.5T421-320h-51l-20-48q-14-33-44-52.5T240-440q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T40-320q0-83 58.5-141.5T240-520q60 0 109.5 32.5T423-400q58 0 97.5 43T560-254q-2 57-42.5 95.5T420-120H240Zm320-134q-5-20-10-39t-10-39q45-19 72.5-59t27.5-89q0-66-47-113t-113-47q-60 0-105 39t-53 99q-20-5-41-9t-41-9q14-88 82.5-144T480-720q100 0 170 70t70 170q0 77-44 138.5T560-254Zm-79-226Z"/>
             </svg>
         </button>
-        
+
         <a href="#home" class="active"><i class="fas fa-home"></i> <span>Home</span></a>
         <a href="#projects"><i class="fas fa-code"></i> <span>Projects</span></a>
         <a href="#education"><i class="fas fa-graduation-cap"></i> <span>Education</span></a>
@@ -69,7 +70,7 @@
                         View Project <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
-                
+
                 <div class="project-item">
                     <div class="project-icon">
                         <i class="fas fa-gamepad"></i>
@@ -80,7 +81,7 @@
                         View Project <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>  
-                
+ 
                 <div class="project-item">
                     <div class="project-icon">
                         <i class="fas fa-gamepad"></i>
@@ -102,20 +103,6 @@
                         View Project <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>  
-
-                <div class="project-item">
-                    <div class="project-icon">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <h3>Portfolio Website-v1</h3>
-                    <p class="project-description">My first portfolio website</p>
-                    <a href="https://arshiyamoallem.github.io/Portfolio-Website-v1/" target="_blank" class="project-link">
-                        Visit Website <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a href="https://github.com/arshiyamoallem/Portfolio-Website-v1" target="_blank" class="project-link">
-                        View Project <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>   
             </div>
         </section>
 
@@ -141,9 +128,27 @@
         <section id="experience" class="card glass-card">
             <h2><span class="text-gradient">Experience</span></h2>
             <div class="timeline">
+                <!-- <div class="timeline-container left">
+                    <div class="content">
+                        <h3>IT/Software Development/Cloud Administration Student,<br>Department of National Defence and Canadian Armed Forces</h3>
+                        <p><i>September 2026 - Present</i><br>
+                            <ul>
+                                <li>
+                                1
+                                </li>
+                                <li>
+                                2
+                                </li>
+                                <li>
+                                3
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div> -->
                 <div class="timeline-container right">
                     <div class="content">
-                        <h3>Student Co Op Position,<br>Shared Services Canada (SSC)</h3>
+                        <h3>DevOps Intern Position,<br>Shared Services Canada (SSC)</h3>
                         <p><i>May 2025 - Dec 2025</i><br>
                             <ul>
                                 <li>
@@ -290,7 +295,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            &copy; 2026 Arshiya Moallem. All rights reserved.
+            &copy; <span id="current-year"></span> Arshiya Moallem. All rights reserved.
         </div>
     </footer>
 

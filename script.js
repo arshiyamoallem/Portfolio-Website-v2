@@ -106,3 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 250);
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dateElement = document.getElementById('current-year');
+  if (dateElement) {
+    dateElement.textContent = new Date().getFullYear();
+  }
+});
